@@ -1,5 +1,5 @@
 # Coursera's Algorithms Specialization - Course 1
-My solutions to programming assignments from Coursera - Algorithm Specialization - Course 1 by Tim Roughgarden
+My solutions to programming assignments from Coursera - Algorithm Specialization - Course 1
 
 # Programming Assignment #1
 In this programming assignment you will implement one or more of the integer multiplication algorithms described in lecture.

@@ -14,7 +14,7 @@ So: what's the product of the following two 64-digit numbers?
 
 [Food for thought: the number of digits in each input number is a power of 2. Does this make your life easier? Does it depend on which algorithm you're implementing?]
 
-# Solution 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184
+Solution 8539734222673567065463550869546574495034888535765114961879601127067743044893204848617875072216249073013374895871952806582723184
 
 # Programming Assignment #2
 Download the following text file:
@@ -27,7 +27,7 @@ Your task is to compute the number of inversions in the file given, where the i 
 
 Because of the large size of this array, you should implement the fast divide-and-conquer algorithm covered in the video lectures.
 
-# Solution 2407905288
+Solution 2407905288
 
 # Programming Assignment #3
 GENERAL DIRECTIONS:
@@ -48,7 +48,7 @@ DIRECTIONS FOR THIS PROBLEM:
 
 For the first part of the programming assignment, you should always use the first element of the array as the pivot element.
 
-# Solution 162085
+Solution 162085
 
 GENERAL DIRECTIONS AND HOW TO GIVE US YOUR ANSWER:
 
@@ -60,7 +60,7 @@ Compute the number of comparisons (as in Problem 1), always using the final elem
 
 Recall from the lectures that, just before the main Partition subroutine, you should exchange the pivot element (i.e., the last element) with the first element.
 
-# Solution 164123
+Solution 164123
 
 DIRECTIONS FOR THIS PROBLEM:
 
@@ -70,7 +70,7 @@ EXAMPLE: For the input array 8 2 4 5 7 1 you would consider the first (8), middl
 
 SUBTLE POINT: A careful analysis would keep track of the comparisons made in identifying the median of the three candidate elements. You should NOT do this. That is, as in the previous two problems, you should simply add m-1 to your running total of comparisons every time you recurse on a subarray with length m.
 
-# Solution 138382
+Solution 138382
 
 # Programming Assignment #4
 
@@ -82,4 +82,4 @@ The file contains the adjacency list representation of a simple undirected graph
 
 Your task is to code up and run the randomized contraction algorithm for the min cut problem and use it on the above graph to compute the min cut. (HINT: Note that you'll have to figure out an implementation of edge contractions. Initially, you might want to do this naively, creating a new graph from the old every time there's an edge contraction. But you should also think about more efficient implementations.) (WARNING: As per the video lectures, please make sure to run the algorithm many times with different random seeds, and remember the smallest cut that you ever find.)
 
-# Solution 17
+Solution 17

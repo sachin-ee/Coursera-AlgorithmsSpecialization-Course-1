@@ -5,23 +5,20 @@
 
 using namespace std;
 
-void padzeros(string &a, string &b)
+void padZeros(string &a, string &b)
 {
     int pad = labs(a.length() - b.length());
     if(a.length() > b.length())
-    {
         b.insert(0, pad, '0');
-    }
     else
-    {
         a.insert(0, pad, '0');
-    }
 }
 
-string str_add(string &a, string &b)
+string strAdd(string &a, string &b)
 {
     string result="";
-    if(a.length() != b.length()) padzeros(a,b);
+    if(a.length() != b.length())
+        padZeros(a,b);
     int carry=0;
     for(int i=a.length()-1; i>=0; i--)
     {
@@ -39,7 +36,8 @@ string str_add(string &a, string &b)
             carry=1;
             tmp=tmp%10;
         }
-        else carry=0;
+        else
+            carry=0;
         result.insert(0,to_string(tmp));
     }
     if(carry==1)
@@ -48,7 +46,7 @@ string str_add(string &a, string &b)
     return result;
 }
 
-string recursive_multiply(const string &x, const string &y)
+string recMultiply(const string &x, const string &y)
 {
     string result="";
     if(x.length()==1 || y.length()==1)
@@ -61,21 +59,21 @@ string recursive_multiply(const string &x, const string &y)
         string c = y.substr(0, (str_len/2));
         string d = y.substr(str_len/2);
 
-        string ac = recursive_multiply(a, c);
-        string bd = recursive_multiply(b, d);
-        string ad = recursive_multiply(a, d);
-        string bc = recursive_multiply(b, c);
+        string ac = recMultiply(a, c);
+        string bd = recMultiply(b, d);
+        string ad = recMultiply(a, d);
+        string bc = recMultiply(b, c);
 
         string new_ac = ac.append(str_len, '0');
-        string acplusbd = str_add(new_ac, bd);
-        string adplusbc = str_add(ad, bc);
+        string acplusbd = strAdd(new_ac, bd);
+        string adplusbc = strAdd(ad, bc);
         string new_adplusbc = adplusbc.append(str_len/2, '0');
-        result = str_add(acplusbd, new_adplusbc);
+        result = strAdd(acplusbd, new_adplusbc);
     }
     return result;
 }
 int main()
 {
-    cout << recursive_multiply(string("3141592653589793238462643383279502884197169399375105820974944592"), string("2718281828459045235360287471352662497757247093699959574966967627")) << endl;
+    cout << recMultiply(string("3141592653589793238462643383279502884197169399375105820974944592"), string("2718281828459045235360287471352662497757247093699959574966967627")) << endl;
     return 0;
 }
